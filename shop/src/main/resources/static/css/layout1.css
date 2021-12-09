@@ -21,3 +21,13 @@ body {
     margin-left: 200px;
     margin-right: 200px;
 }
+
+.input-group{
+    margin-bottom : 15px
+}
+.img-div {
+    margin-bottom : 10px
+}
+.fieldError {
+    color: #bd2130;
+}

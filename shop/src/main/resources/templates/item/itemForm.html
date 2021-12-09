@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<!-- 사용자 CSS 추가 -->
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link th:href="@{/css/layout1.css}" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
 </head>
 
 
     <nav th:replace="fragments/header :: header"></nav>
+
 
     <script th:inline="javascript">
             $(document).ready(function(){
@@ -44,10 +48,23 @@
                 });
             }
 
-        </script>
+    </script>
 
 
-    <div class="container" th:fragment="content">
+    <style>
+            .input-group {
+                margin-bottom : 15px
+            }
+            .img-div {
+                margin-bottom : 10px
+            }
+            .fieldError {
+                color: #bd2130;
+            }
+    </style>
+
+
+    <div class="content" th:fragment="content">
 
         <form role="form" method="post" enctype="multipart/form-data" th:object="${itemFormDto}">
 
